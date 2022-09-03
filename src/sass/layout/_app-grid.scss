@@ -1,3 +1,14 @@
 .app-grid{
-    
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(16, 1fr);
+}
+
+.header-grid{
+  grid-row: 1/8;
+}
+
+.bottom-grid{
+  grid-row: 8/-1;
 }

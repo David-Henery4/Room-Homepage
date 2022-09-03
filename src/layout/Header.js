@@ -6,7 +6,7 @@ import heroImg from "../images/mobile-image-hero-1.jpg";
 
 const Header = () => {
   return (
-    <main className="header">
+    <main className="header header-grid">
       <MobNav />
       <section className="header-img">
         <img src={heroImg} alt="hero-img" />

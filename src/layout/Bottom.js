@@ -4,7 +4,7 @@ import aboutBottonImg from "../images/image-about-light.jpg"
 
 const Bottom = () => {
   return (
-    <section className="about">
+    <section className="about bottom-grid">
       <div className="about-img1">
         <img className="about-img1__img" src={aboutTopImg} alt="about-img-1" />
       </div>
