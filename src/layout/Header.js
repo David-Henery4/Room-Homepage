@@ -2,6 +2,7 @@ import React from "react";
 import { MobNav } from "../components";
 import {IconLeft, IconRight, Arrow} from "../svgs";
 import heroImg from "../images/mobile-image-hero-1.jpg";
+import heroImgDesk from "../images/desktop-image-hero-1.jpg";
 
 
 const Header = () => {
@@ -9,7 +10,10 @@ const Header = () => {
     <main className="header header-grid">
       <MobNav />
       <section className="header-img">
-        <img className="header-hero-img" src={heroImg} alt="hero-img" />
+        <picture>
+          <source srcSet={heroImgDesk} media="(min-width: 28.12em)"/>
+        <img className="header-hero-img" src={heroImg} alt="hero-img"/>
+        </picture>
       </section>
       <div className="header-slider-nav">
         <IconLeft className="header-slider__icon" />

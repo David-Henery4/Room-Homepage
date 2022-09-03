@@ -1,5 +1,7 @@
 .app-grid{
   width: 100%;
+  max-width: 525px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(16, 1fr);

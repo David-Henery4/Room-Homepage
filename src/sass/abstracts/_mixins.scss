@@ -1,0 +1,13 @@
+
+@mixin respond ($breakpoint) {
+    @if ($breakpoint == tab) { // 450px
+        @media (min-width: 28.12em){
+            @content
+        }
+    };
+    @if ($breakpoint == smlLap) { 
+        @media (min-width: 60.93){ // 975px
+            @content
+        }
+    };
+}
