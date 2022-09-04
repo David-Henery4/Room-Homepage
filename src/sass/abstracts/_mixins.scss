@@ -6,8 +6,14 @@
         }
     };
     @if ($breakpoint == smlLap) { 
-        @media (min-width: 60.93){ // 975px
+        @media (min-width: 60.93em){ // 975px
             @content
         }
     };
+    @if ($breakpoint == desk){
+        @media (min-width: 73.43em) {
+            @content
+        }
+    };
+    // 73.43em = 1175px
 }

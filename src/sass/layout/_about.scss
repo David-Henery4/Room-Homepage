@@ -6,11 +6,15 @@
     grid-column: 1/-1;
     grid-row: 1/2;
     width: 100%;
+    @include respond(smlLap) {
+      grid-column: 1/5;
+      grid-row: 1/5;
+    }
     &__img {
-    width: 100%;
-    height: 100%;
-    // object-fit: cover;
-    object-position: 50% 100%;
+      width: 100%;
+      height: 100%;
+      // object-fit: cover;
+      object-position: 50% 100%;
     }
   }
   &-info {
@@ -23,15 +27,22 @@
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
+    @include respond(smlLap) {
+      grid-column: 5/13;
+      grid-row: 1/5;
+    }
+    @include respond (desk){
+      padding: 5.5rem;
+    }
   }
   &__title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 4px;
   }
   &__text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 16px;
     color: $darkGrey;
     font-weight: 500;
@@ -40,6 +51,10 @@
     width: 100%;
     grid-column: 1/-1;
     grid-row: 4/5;
+    @include respond(smlLap) {
+      grid-column: 13/-1;
+      grid-row: 1/5;
+    }
     &__img {
       width: 100%;
       height: 100%;
