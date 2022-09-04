@@ -47,6 +47,21 @@
       font-weight: 600;
       text-transform: lowercase;
       font-family: $fontFamily;
+      position: relative;
+
+      &:hover{
+        cursor: pointer;
+        &::after{
+        content: "";
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        position: absolute;
+        height: 2px;
+        width: 15px;
+      }
+      }
     }
   }
 }

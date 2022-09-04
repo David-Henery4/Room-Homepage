@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { MobNav } from "../components";
+import { MobNav, Sidenav } from "../components";
 import {IconLeft, IconRight, Arrow} from "../svgs";
 import {textAndImages } from "../image-arrays/images";
 
 
 const Header = () => {
   const [slider, setSlider] = useState(0)
+  const [isSidebar, setIsSidebar] = useState(false)
   //
   const incrementSider = () => {
     setSlider(slider + 1)
@@ -13,6 +14,11 @@ const Header = () => {
   //
   const deincrementSider = () => {
     setSlider(slider - 1)
+  }
+  //
+  const handleSidebar = () => {
+    setIsSidebar(!isSidebar)
+    console.log("clicked")
   }
   //
   useEffect(() => {
@@ -26,7 +32,8 @@ const Header = () => {
   //
   return (
     <main className="header header-grid">
-      <MobNav />
+      <MobNav handleSidebar={handleSidebar} />
+      <Sidenav isSidebar={isSidebar} handleSidebar={handleSidebar} />
       <section className="header-img">
         <picture>
           <source
@@ -41,8 +48,15 @@ const Header = () => {
         </picture>
       </section>
       <div className="header-slider-nav">
-        <IconLeft className="header-slider__icon" onClick={deincrementSider} />
-        <IconRight className="header-slider__icon" onClick={incrementSider} />
+        <div className="header-slider-icon-wrap">
+          <IconLeft
+            className="header-slider__icon"
+            onClick={deincrementSider}
+          />
+        </div>
+        <div className="header-slider-icon-wrap">
+          <IconRight className="header-slider__icon" onClick={incrementSider} />
+        </div>
       </div>
       <section className="header-info">
         <h1 className="header__title">

@@ -1,24 +1,20 @@
 import React from 'react'
 import {Hamburger, Logo} from "../svgs/index";
+import navigationData from '../navData/navdata';
 
-const MobNav = () => {
+const MobNav = ({handleSidebar}) => {
   return (
     <nav className="nav">
-      <Hamburger className="nav__burger" />
+      <Hamburger className="nav__burger" onClick={handleSidebar}/>
       <Logo className="nav__logo" />
       <ul className="nav-links">
-        <li className="nav-link">
-          <button className="nav-link__btn">Home</button>
-        </li>
-        <li className="nav-link">
-          <button className="nav-link__btn">Shop</button>
-        </li>
-        <li className="nav-link">
-          <button className="nav-link__btn">About</button>
-        </li>
-        <li className="nav-link">
-          <button className="nav-link__btn">Contact</button>
-        </li>
+        {navigationData.map(n => {
+          return (
+            <li key={n.id} className="nav-link">
+              <button className="nav-link__btn">{n.link}</button>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
