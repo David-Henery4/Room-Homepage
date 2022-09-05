@@ -18,13 +18,13 @@
 .header-grid{
   grid-row: 1/8;
   @include respond (smlLap){
-    grid-row: 1/11;
+    grid-row: 1/12;
   }
 }
 
 .bottom-grid{
   grid-row: 8/-1;
     @include respond (smlLap){
-    grid-row: 11/17;
+    grid-row: 12/17;
   }
 }

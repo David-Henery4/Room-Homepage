@@ -48,14 +48,11 @@ const Header = () => {
         </picture>
       </section>
       <div className="header-slider-nav">
-        <div className="header-slider-icon-wrap">
-          <IconLeft
-            className="header-slider__icon"
-            onClick={deincrementSider}
-          />
+        <div className="header-slider-icon-wrap" onClick={deincrementSider}>
+          <IconLeft className="header-slider__icon" />
         </div>
-        <div className="header-slider-icon-wrap">
-          <IconRight className="header-slider__icon" onClick={incrementSider} />
+        <div className="header-slider-icon-wrap" onClick={incrementSider}>
+          <IconRight className="header-slider__icon" />
         </div>
       </div>
       <section className="header-info">

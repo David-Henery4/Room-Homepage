@@ -10,12 +10,14 @@ html{
     font-size: 62.5%; // 1rem = 10px (10/16)
     @include respond (tab){
         font-size: 75%; // 75% = 1rem = 12px
-    } // 87.5% = 1rem = 14px
+    }
 
     @include respond (smlLap){
-        font-size: 87.5%;
+        // font-size: 87.5%; // 87.5% = 1rem = 14px
     }
     @include respond (desk){
-        font-size: 100%;
+        // font-size: 87.5%;
+        // font-size: 93.75%;
+        // font-size: 100%;
     }
 }

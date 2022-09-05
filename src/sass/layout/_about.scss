@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: .9rem;
     @include respond(smlLap) {
       grid-column: 5/13;
       grid-row: 1/-1;
@@ -40,13 +40,13 @@
     }
   }
   &__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 4px;
   }
   &__text {
-    font-size: .8rem;
+    font-size: 1.1rem;
     line-height: 16px;
     color: $darkGrey;
     font-weight: 500;

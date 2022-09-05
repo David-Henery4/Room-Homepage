@@ -11,9 +11,10 @@
         }
     };
     @if ($breakpoint == desk){
-        @media (min-width: 73.43em) {
+        @media (min-width: 77.81em) {
             @content
         }
     };
     // 73.43em = 1175px
+    // 76.56 = 1225px
 }
