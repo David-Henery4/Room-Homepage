@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Frontend Mentor - Room homepage solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Room homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Navigate the slider using either their mouse/trackpad or keyboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `npm run build`
+![desktop](./readme-image/desktop-screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+(!!!!Links to be added!!!!)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `npm run eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Semantic HTML5 markup
+- CSS
+- SASS/SCSS
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- Javascript
+- [React](https://reactjs.org/) - JS library
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+One of my main takeaways from this project is that I have definitely improved my CSS grid skills. This challenges layout was perfect to test these and let play around with the different ways implementing the grid (E.G - Using "fr" units compared to fixed heights). Then seeing the way the content interacted with them under different units in order to get the desired effect I wanted. Overall I think I have learnt more about the way the grid behaves and how to use it to create different layouts.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Another I thing I understand better, because of this project, Is how to retrieve values from a child component into a parent element. I done this by creating a callback function in the parent component, then passing the function into the child component as a prop. I done this because I needed to access an event on a element inside the child component, this event then effected a useState value I had in the parent. Although I didn't really need to bring a value from the child component into the parent in this project, I can see how this could be a effective method for doing so, by passing a specific value into the callback functions paramater, where we could then use it in the parent component.
 
-## Learn More
+```js
+const Parent = () => {
+  const [slider, setSlider] = useState(0);
+  //
+  const incrementSider = () => {
+    setSlider(slider + 1);
+  };
+  return (
+    <main>
+      <SliderNav
+        incrementSider={incrementSider}
+      />
+    </main>
+  )
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const Child = ({incrementSider}) ={
+  return (
+    <div onClick={incrementSider}>
+      <IconRight/>
+    </div>
+  ) 
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Continued development
 
-### Code Splitting
+In the future I feel like I'm ready to take on projects with more testing layouts so I can really challenge myself when it comes to grid based layouts. This is an Important skill I wish to get better going forward and will constantly try to improve.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Author
 
-### Analyzing the Bundle Size
+- Website - [David Henery](https://www.your-site.com)
+- Frontend Mentor - [@David-Henery4](https://www.frontendmentor.io/profile/David-Henery4)
+- LinkedIn - [David Henery](https://www.linkedin.com/in/david-henery-725458241)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

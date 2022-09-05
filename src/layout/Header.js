@@ -3,29 +3,44 @@ import { MobNav, Sidenav, HeroImage, SliderNav, HeaderInfo } from "../components
 import {textAndImages } from "../image-arrays/images";
 
 const Header = () => {
-  const [slider, setSlider] = useState(0)
-  const [isSidebar, setIsSidebar] = useState(false)
+  const [slider, setSlider] = useState(0);
+  const [isSidebar, setIsSidebar] = useState(false);
   //
   const incrementSider = () => {
-    setSlider(slider + 1)
-  }
+    setSlider(slider + 1);
+  };
   //
   const deincrementSider = () => {
-    setSlider(slider - 1)
-  }
+    setSlider(slider - 1);
+  };
+  //
+  const handleKeyCheck = (e) => {
+    if (e.key === "ArrowRight") {
+      incrementSider()
+    }
+    if (e.key === "ArrowLeft") {
+      deincrementSider()
+    }
+  };
   //
   const handleSidebar = () => {
-    setIsSidebar(!isSidebar)
-  }
+    setIsSidebar(!isSidebar);
+  };
+  //
+  useEffect(() => {
+    window.addEventListener("keyup", handleKeyCheck);
+    return () => window.removeEventListener("keyup", handleKeyCheck);
+    // eslint-disable-next-line
+  }, [slider]);
   //
   useEffect(() => {
     if (slider > textAndImages.length - 1) {
-      setSlider( (i) => i = 0);
+      setSlider((i) => (i = 0));
     }
     if (slider < 0) {
-      setSlider((i) => i = textAndImages.length - 1);
+      setSlider((i) => (i = textAndImages.length - 1));
     }
-  }, [slider])
+  }, [slider]);
   //
   return (
     <main className="header header-grid">
@@ -36,7 +51,7 @@ const Header = () => {
         deincrementSider={deincrementSider}
         incrementSider={incrementSider}
       />
-      <HeaderInfo slider={slider}/>
+      <HeaderInfo slider={slider} />
     </main>
   );
 };
