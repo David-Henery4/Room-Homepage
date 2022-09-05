@@ -7,11 +7,6 @@ import heroImgDesk1 from "../images/desktop-image-hero-1.jpg";
 import heroImgDesk2 from "../images/desktop-image-hero-2.jpg";
 import heroImgDesk3 from "../images/desktop-image-hero-3.jpg";
 
-// Mobile Array
-export const mobileHeros = [heroImg1, heroImg2, heroImg3];
-// Desktop Array
-export const deskHeros = [heroImgDesk1, heroImgDesk2, heroImgDesk3];
-
 // Hero Text & Images
 
 export const textAndImages = [

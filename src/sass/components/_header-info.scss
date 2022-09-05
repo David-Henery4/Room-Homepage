@@ -1,0 +1,56 @@
+.header {
+  &-info {
+    grid-row: 7/16;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+    padding: 5.5rem 3rem;
+    @include respond(smlLap) {
+      grid-row: 1/-1;
+      grid-column: 10/-1;
+      padding: 1.5rem 6.5rem 6rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    font-weight: 600;
+    @include respond(desk) {
+      font-size: 4rem;
+    }
+  }
+  &__text {
+    font-size: 1.1rem;
+    color: $darkGrey;
+    line-height: 16px;
+    font-weight: 500;
+    max-width: 350px;
+  }
+  &-cta {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    color: $black;
+    fill: $black;
+    &:hover {
+      color: $darkGrey;
+      fill: $darkGrey;
+      cursor: pointer;
+    }
+    &__btn {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 7px;
+    }
+  }
+}

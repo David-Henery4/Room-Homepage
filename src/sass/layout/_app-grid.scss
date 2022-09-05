@@ -7,7 +7,6 @@
   grid-template-columns: 100%;
   grid-template-rows: repeat(16, 1fr);
   @include respond (smlLap){
-    // grid-template-columns: repeat(16, 1fr);
     margin: auto;
     max-width: none;
     height: 100vh;
