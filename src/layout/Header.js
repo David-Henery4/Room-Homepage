@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { MobNav, Sidenav, HeroImage, SliderNav, HeaderInfo } from "../components";
+import { MobNav, Sidenav, HeroImage, SliderNav, HeaderInfo, Overlay } from "../components";
 import {textAndImages } from "../image-arrays/images";
 
 const Header = () => {
@@ -46,6 +46,7 @@ const Header = () => {
     <main className="header header-grid">
       <MobNav handleSidebar={handleSidebar} />
       <Sidenav isSidebar={isSidebar} handleSidebar={handleSidebar} />
+      <Overlay isSidebar={isSidebar} />
       <HeroImage slider={slider} />
       <SliderNav
         deincrementSider={deincrementSider}
