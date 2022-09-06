@@ -1,29 +1,11 @@
 .app-grid{
   width: 100%;
-  position: relative;
-  max-width: 525px;
-  margin: 0 auto;
+  // position: relative;
   display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(16, 1fr);
-  @include respond (smlLap){
-    margin: auto;
-    max-width: none;
+  grid-template-columns: repeat(16, 1fr);
+  // grid-template-rows: repeat(16, 1fr);
+  @include respond (lrgTab){
     height: 100vh;
-    overflow: hidden;
-  }
-}
-
-.header-grid{
-  grid-row: 1/8;
-  @include respond (smlLap){
-    grid-row: 1/12;
-  }
-}
-
-.bottom-grid{
-  grid-row: 8/-1;
-    @include respond (smlLap){
-    grid-row: 12/17;
+    grid-template-rows: repeat(16, 1fr);
   }
 }

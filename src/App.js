@@ -1,19 +1,20 @@
-import {Header, Bottom} from "./layout"
+import { AppWrap } from "./layout";
 
 function App() {
   return (
-    <div className="App app-grid">
-      <Header />
-      <Bottom />
+    <div className="App attrib">
+      <AppWrap />
       <div className="attribution">
-        Challenge by 
+        Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"
           target="_blank"
           rel="noreferrer"
-        > Frontend Mentor
+        >
+          {" "}
+          Frontend Mentor
         </a>
-        . Coded by 
+        . Coded by
         <a href="https://www.djhwebdevelopment.com"> David Henery</a>.
       </div>
     </div>

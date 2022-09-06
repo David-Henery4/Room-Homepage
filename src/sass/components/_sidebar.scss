@@ -8,13 +8,13 @@
   left: 0;
   z-index: 100;
   transform: translateY(-100%);
-  transition: ease-out .2s;
-  @include respond (smlLap){
+  transition: ease-out 0.2s;
+  @include respond(lrgTab) {
     display: none;
   }
-  &-close{
+  &-close {
     margin-right: auto;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
@@ -37,7 +37,7 @@
   }
 }
 
-.sidebar-active{
-  transition: ease-in .2s;
+.sidebar-active {
+  transition: ease-in 0.2s;
   transform: translateY(0%);
 }

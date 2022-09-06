@@ -1,9 +1,0 @@
-.header {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(16, 1fr);
-  @include respond(smlLap) {
-    grid-template-rows: repeat(16, 1fr);
-    height: 100%;
-  }
-}

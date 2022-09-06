@@ -1,21 +1,36 @@
+@mixin respond($breakpoint) {
+  @if ($breakpoint == tab) {
+    // 450px // rem change
+    @media (min-width: 28.12em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == smlTab) {
+    // 525px = 32.81
+    @media (min-width: 32.81em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == lrgTab) {
+    @media (min-width: 46.25em) {
+      // 740px
+      @content;
+    }
+  }
 
-@mixin respond ($breakpoint) {
-    @if ($breakpoint == tab) { // 450px
-        @media (min-width: 28.12em){
-            @content
-        }
-    };
-    @if ($breakpoint == smlLap) { 
-        @media (min-width: 60.93em){ // 975px
-            @content
-        }
-    };
-    @if ($breakpoint == desk){
-        @media (min-width: 77.81em) {
-            @content
-        }
-    };
-    // 73.43em = 1175px
-    // 76.56 = 1225px
-    // 77.81em = 1245px
+  @if ($breakpoint == smlDesk) {
+    @media (min-width: 65.62em) {
+      // 65.62em = 1050px
+      @content;
+    }
+  }
+  @if ($breakpoint == desk) {
+    // used for desktop padding on lrg screens
+    @media (min-width: 77.81em) {
+      @content;
+    }
+  }
+  // 73.43em = 1175px
+  // 76.56 = 1225px
+  // 77.81em = 1245px
 }

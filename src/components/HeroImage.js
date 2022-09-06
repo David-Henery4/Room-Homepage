@@ -10,7 +10,7 @@ const HeroImage = ({slider}) => {
           media="(min-width: 28.12em)"
         />
         <img
-          className="header-hero-img"
+          className="header-img-hero-img"
           src={textAndImages[slider] && textAndImages[slider].mobImg}
           alt="hero-img"
         />

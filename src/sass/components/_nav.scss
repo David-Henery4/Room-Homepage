@@ -1,6 +1,6 @@
 .nav {
   grid-column: 1/-1;
-  grid-row: 1/3;
+  grid-row: 1/2;
   z-index: 5;
   width: 100%;
   height: 100%;
@@ -8,31 +8,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include respond(smlLap) {
-    grid-column: 1/8;
-    grid-row: 1/2;
+  @include respond(lrgTab) {
     align-items: flex-end;
     justify-content: flex-start;
     gap: 65px;
   }
+  @include respond(lrgTab) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 60%;
+  }
   &__burger {
     margin-right: auto;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
-    @include respond(smlLap) {
+    @include respond(lrgTab) {
       display: none;
     }
   }
   &__logo {
     margin-right: auto;
-    @include respond(smlLap) {
+    @include respond(lrgTab) {
       margin-right: 0;
     }
   }
   &-links {
     display: none;
-    @include respond(smlLap) {
+    @include respond(lrgTab) {
       display: block;
       list-style-type: none;
       display: flex;
