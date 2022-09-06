@@ -3,7 +3,7 @@ import { textAndImages } from "../image-arrays/images";
 
 const HeroImage = ({slider}) => {
   return (
-    <section className="header-img">
+    <header className="header-img">
       <picture>
         <source
           srcSet={textAndImages[slider] && textAndImages[slider].deskImg}
@@ -15,7 +15,7 @@ const HeroImage = ({slider}) => {
           alt="hero-img"
         />
       </picture>
-    </section>
+    </header>
   );
 };
 

@@ -6,7 +6,9 @@ const Sidenav = ({ isSidebar, handleSidebar }) => {
   return (
     <aside className={isSidebar ? "sidebar sidebar-active" : "sidebar"}>
       <ul className="sidebar-links">
-        <Close className="sidebar-close" onClick={handleSidebar}/>
+        <i className="sidebar-close">
+          <Close onClick={handleSidebar} />
+        </i>
         {navigationData.map((n) => {
           return (
             <li key={n.id} className="sidebar-link">

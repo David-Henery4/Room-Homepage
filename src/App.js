@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App attrib">
       <AppWrap />
-      <div className="attribution">
+      <footer className="attribution">
         Challenge by
         <a
           href="https://www.frontendmentor.io?ref=challenge"
@@ -16,7 +16,7 @@ function App() {
         </a>
         . Coded by
         <a href="https://www.djhwebdevelopment.com"> David Henery</a>.
-      </div>
+      </footer>
     </div>
   );
 }

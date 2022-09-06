@@ -30,8 +30,7 @@ Users should be able to:
 
 ### Links
 
-(!!!!Links to be added!!!!)
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Fontend Mentor Solution](https://www.frontendmentor.io/solutions/roomhomepage-cssgrid-sass-react-reacthooks-jsx-responsive-kAQD_BZ0a0)
 - Live Site URL: [Room Furniture Landing](https://room-furniture-landing.netlify.app)
 
 ## My process
