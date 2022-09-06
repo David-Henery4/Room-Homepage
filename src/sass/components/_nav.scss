@@ -17,6 +17,9 @@
   }
   &__burger {
     margin-right: auto;
+    &:hover{
+      cursor: pointer;
+    }
     @include respond(smlLap) {
       display: none;
     }
